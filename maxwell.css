@@ -1,0 +1,77 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+#bg {
+	position: fixed; 
+	bottom: 0; left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	filter: brightness(50%);
+	z-index: -5;
+}
+
+nav {
+	height: auto; width: 100%;
+	background: rgb(130,130,130);
+	background: 
+		linear-gradient(180deg, 
+			rgba(130,130,130,1) 0%, 
+			rgba(130,130,130,1) 71%, 
+			rgba(112,112,112,1) 90%);	
+	position: fixed;
+	top: 0; right: 0;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row-reverse wrap;
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	font-size: 1.2em;
+}
+
+nav li {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	display: inline;
+}
+
+nav a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #fafafa;
+}
+
+nav a:visited {
+	color: #b5b5b5;
+}
+
+nav:link {
+	color: #b5b5b5;
+}
+
+.hlogo {
+	float: left;
+	max-height: 10vh;
+	margin: 0.5em;
+	margin-top: 1em;
+}
+
+.herotitle {
+	position: absolute;
+	top: 25vh; left: 12.5vw;
+	color: #FFFFFF;
+	font-size: 175%;
+}

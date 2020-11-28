@@ -231,7 +231,7 @@ footer {
 }
 
 /* Medium sized media */
-@media (min-width: 780px) {
+@media (min-width: 768px) {
 
 	div.herotitle h3 {
 		display: inline;

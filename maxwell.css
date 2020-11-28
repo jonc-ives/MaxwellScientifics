@@ -1,3 +1,4 @@
+/* To help the Home Screen Background to Fit Page*/
 html, body {
 	width: 100%;
 	height: 100%;
@@ -5,9 +6,99 @@ html, body {
 }
 
 body {
-	background: #1e1e1e;
+	background: #F5F5F5;
 }
 
+#wrapper {
+	padding: 2em;
+	background-color: #F5F5F5;
+}
+
+/* Navigation Pane */
+nav {
+	background: rgb(130,130,130);
+	background: 
+		linear-gradient(180deg, 
+			rgba(130,130,130,1) 0%, 
+			rgba(130,130,130,1) 71%, 
+			rgba(112,112,112,1) 90%);	
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 51px;
+	display: flex;
+	flex-flow: row wrap;
+	text-align: left;
+	font-weight: bold;
+	z-index: 9999;
+}
+
+/* Drop Down Navigation -- smallest screen break */
+.dropdown {
+  padding-left: 1em;
+}
+
+.dropbtn {
+  background: rgb(130,130,130);
+	background: 
+		linear-gradient(180deg, 
+			rgba(130,130,130,1) 0%, 
+			rgba(130,130,130,1) 71%, 
+			rgba(112,112,112,1) 90%);	
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(100,100,100);
+}
+
+/* Navigation Logo */
+.hlogo {
+	height: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+nav a.current {
+	color: #b5b5b5;
+}
+
+/* Makes sure we don't see large-media navigation on small media */
+nav ul {
+	display: none;
+}
+
+/* Home Screen Background Image*/
 #bg {
 	position: fixed; 
 	bottom: 0; left: 0;
@@ -18,64 +109,7 @@ body {
 	z-index: -5;
 }
 
-nav {
-	height: 94px; width: 100%;
-	background: rgb(130,130,130);
-	background: 
-		linear-gradient(180deg, 
-			rgba(130,130,130,1) 0%, 
-			rgba(130,130,130,1) 71%, 
-			rgba(112,112,112,1) 90%);	
-	position: fixed;
-	top: 0; left: 0;
-	text-align: left;
-	font-weight: bold;
-	z-index: 9999;
-}
-
-nav ul {
-	list-style-type: none;
-	display: flex;
-	flex-flow: row wrap;
-	font-size: 0.9em;
-	max-width: 480;
-	margin: 0;
-	padding-bottom: 0.5em;
-}
-
-nav li {
-	padding-top: 0.1em;
-	padding-bottom: 0.1em;
-	padding-left: 0.5em;
-	padding-right: 1.5em;
-	display: inline;
-}
-
-nav a { 
-	display: block;
-	text-decoration: none;
-	color: #000000;
-}
-
-nav a:hover {
-	color: #fafafa;
-}
-
-nav a:visited {
-	color: #b5b5b5;
-}
-
-nav:link {
-	color: #b5b5b5;
-}
-
-.hlogo {
-	padding-right: 100vw;
-	max-width: 120px;
-	margin: 0;
-	padding-top: 0.5em;
-}
-
+/* Home Page Text */
 .herotitle {
 	position: absolute;
 	top: 25vh; left: 12.5vw;
@@ -84,11 +118,16 @@ nav:link {
 	font-size: 175%;
 }
 
+div.herotitle h3 {
+	display: none;
+}
+
+/* Banner and title on top of each page */
 .banner {
 	background-image: url("assets/maxwell_bg.jpg");
 	width: 100%;
-	height: 120px;
-	margin-top: 94px;
+	height: 105px;
+	margin-top: 51px;
 	text-align: center;
 }
 
@@ -98,16 +137,13 @@ nav:link {
 	padding-top: 1em;
 }
 
-#wrapper {
-	padding: 2em;
-	background-color: #F5F5F5;
-}
-
+/* This is used for a few text elements */
 .ftitle {
 	padding-left: 2em;
 	padding-right: 2em;
 }
 
+/* A dashed line divider */
 hr.dashed {
 	border-width: 0;
 	border-top: 2px dotted #bbb;
@@ -115,6 +151,7 @@ hr.dashed {
 	margin-right: 2em;
 }
 
+/* Styling for catalog items */
 section {
 	border-color: rgb(130,130,130);
 	border-width: 0.5px;
@@ -133,9 +170,11 @@ section {
 	display: flex;
 }
 
-.comments-title {
+div.pricebox p {
+	line-height: 2em;
 }
 
+/* Styling for customer comments */
 .comments-box {
 	padding: 0px 10px 2px 50px;
 }
@@ -162,64 +201,114 @@ div h2 {
 	padding-top: 1em;
 }
 
+/* Styling for page footers */
 footer {
+	color: #000000;
+	width: 100%;
+	font-size: 0.8em;
+	font-style: italic;
 	text-align: center;
+	padding-top: 1em;
 }
 
-@media (min-width: 760px) {
+#homefooter {
+	color: #FFFFFF;
+	position: fixed;
+	bottom: 1em;
+}
 
-	nav {
-		height: 56px;
-	}
-	
-	.nav {
-		padding-top: 1em;
+#homefooter #l-phone {
+	color: #FFFFFF;
+}
+
+#l-phone {
+	display: inline;
+	text-decoration: none;
+}
+
+#nl-phone {
+	display: none;
+}
+
+/* Medium sized media */
+@media (min-width: 780px) {
+
+	div.herotitle h3 {
+		display: inline;
 	}
 
-	.hlogo {
-		padding-top: 0.5em;
-		padding-right: 0;
+	.dropdown {
+		display: none;
+	}
+
+	nav ul {
+		list-style-type: none;
+		display: flex; margin: 0;
+		flex-flow: row wrap;
+		font-size: 0.9em;
+		position: absolute;
+		top: 50%; right: 2em;
+		transform: translateY(-50%);
+	}
+
+	nav li {
+		padding: 1em;
+		display: inline;
+	}
+
+	nav a { 
+		display: block;
+		text-decoration: none;
+		color: #000000;
+	}
+
+	nav a:hover {
+		color: #fafafa;
 	}
 
 	.banner {
-		margin-top: 56px;
-		text-align: left;
-	}
-
-	.title {
-		padding-left: 12vw;
-		font-size: 2em;
+		width: 90%;
+		margin: auto;
+		margin-top: 80px;
 	}
 
 	.obr {
 		display: none;
 	}
+
+	#l-phone {
+		display: none;
+	}
+
+	#nl-phone {
+		display: inline;
+	}
 }
 
-@media (min-width: 1024px) {
+/* large sized media */
+@media (min-width: 1068px) {
+
 	nav {
-		height: 73px;
-		padding-bottom: 1em;
+		height: 80px;
 	}
 
-	nav li {
-		font-size: 1.5em;
-	}
-
-	.nav {
-		padding-top: 1.2em;
-	}
-
+	/* Navigation Logo */
 	.hlogo {
-		max-width: 180px;
+		height: 64px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	nav ul {
+		font-size: 1.2em;
+		position: absolute;
+		top: 50%; right: 2em;
+		transform: translateY(-50%);
 	}
 
 	.banner {
-		margin-top: 73px;
-	}
-
-	#wrapper {
-		width: 80%;
-		margin: auto;
+		margin-top: 110px;
 	}
 }

@@ -124,7 +124,7 @@ div.herotitle h3 {
 
 /* Banner and title on top of each page */
 .banner {
-	background-image: url("assets/maxwell_bg.jpg");
+	background-image: url(maxwell_bg.jpg);
 	width: 100%;
 	height: 105px;
 	margin-top: 51px;
@@ -231,7 +231,7 @@ footer {
 }
 
 /* Medium sized media */
-@media (min-width: 768px) {
+@media (min-width: 780px) {
 
 	div.herotitle h3 {
 		display: inline;
